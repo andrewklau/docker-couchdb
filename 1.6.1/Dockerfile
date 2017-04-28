@@ -1,6 +1,7 @@
 FROM couchdb:1.6.1
 
-RUN mkdir -p \
+RUN apt-get update && apt-get install -y rsync && \
+    mkdir -p \
       /usr/local/var/lib/couchdb \
       /usr/local/var/log/couchdb \
       /usr/local/var/run/couchdb \
